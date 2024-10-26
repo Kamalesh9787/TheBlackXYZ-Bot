@@ -22,11 +22,11 @@ def is_enabled(value, default):
 
 # Bot information
 SESSION = environ.get('SESSION', 'TheBlackBot')
-API_ID = int(environ.get('API_ID', '29450452'))
-API_HASH = environ.get('API_HASH', '54759945ff88b52777eec9a455944d31')
+API_ID = int(environ.get('API_ID', '25599491'))
+API_HASH = environ.get('API_HASH', 'c8e3c0561cf148a6504f27b111fc3698')
 BOT_TOKEN = environ.get('BOT_TOKEN', "")
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002101130967'))
-ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '1759982322').split()]
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1002037384930'))
+ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '5983189506').split()]
 
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 1800))
@@ -36,59 +36,59 @@ MELCOW_VID = environ.get("MELCOW_VID", "https://t.me/TheBlackXYZ/155")
 SPELL_IMG = environ.get("SPELL_IMG", "https://te.legra.ph/file/15c1ad448dfe472a5cbb8.jpg")
 
 # Channels & Users,Auth Channel - Force Suscribe 
-CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '').split()]
+CHANNELS = [int(ch) if id_pattern.search(ch) else ch for ch in environ.get('CHANNELS', '-1002076925276').split()]
 auth_users = [int(user) if id_pattern.search(user) else user for user in environ.get('AUTH_USERS', '').split()]
 AUTH_USERS = (auth_users + ADMINS) if auth_users else []
-auth_channel = environ.get('AUTH_CHANNEL', '-1001889509068') # give your force subscribe channel id here else leave it blank
+auth_channel = environ.get('AUTH_CHANNEL', '-1002076925276') # give your force subscribe channel id here else leave it blank
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else None
 reqst_channel = environ.get('REQST_CHANNEL_ID', '')
 REQST_CHANNEL = int(reqst_channel) if reqst_channel and id_pattern.search(reqst_channel) else None
 support_chat_id = environ.get('SUPPORT_CHAT_ID', '')
 SUPPORT_CHAT_ID = int(support_chat_id) if support_chat_id and id_pattern.search(support_chat_id) else None
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
-FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1001860177906')).split()]
+FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '-1002170998708')).split()]
 DELETE_CHANNELS = [int(dch) if id_pattern.search(dch) else dch for dch in environ.get('DELETE_CHANNELS', '0').split()]
 
 # MongoDB information database 
-DATABASE_URI = environ.get('DATABASE_URI', "mongodb+srv://TheBlackXYZBotMovies:TheBlackXYZBotMovies@cluster0.nu4uqj6.mongodb.net/?retryWrites=true&w=majority")
+DATABASE_URI = environ.get('DATABASE_URI', "")
 DATABASE_NAME = environ.get('DATABASE_NAME', "Cluster0")
 COLLECTION_NAME = environ.get('COLLECTION_NAME', 'blackcollection')
 
 #Rename Mode - True or False 🤔
-RENAME_MODE = bool(environ.get('RENAME_MODE', True)) # Set True or False
+RENAME_MODE = bool(environ.get('RENAME_MODE', False)) # Set True or False
 
 # Background Remove
 RemoveBG_API = environ.get("RemoveBG_API", "f7stCpqeKmuDeHMX66qH5V8D")
 
 # Channel Links 💸
-GRP_LNK = environ.get('GRP_LNK', 'https://t.me/TheBlackXYZ_Movie_Group')
-CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/TheBlackXYZ')
-TUTORIAL = environ.get('TUTORIAL', 'https://t.me/TheBlackXYZ/155')
-VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/TheBlackXYZ/155')
-SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'The_Black_XYZ_SupportChat') # Support Chat Links Without https:// or @
+GRP_LNK = environ.get('GRP_LNK', 'https://t.me/Mini_Request')
+CHNL_LNK = environ.get('CHNL_LNK', 'https://t.me/Tamil_Mini')
+TUTORIAL = environ.get('TUTORIAL', 'https://t.me/Tmv_link')
+VERIFY_TUTORIAL = environ.get('VERIFY_TUTORIAL', 'https://t.me/Tmv_link')
+SUPPORT_CHAT = environ.get('SUPPORT_CHAT', 'Mini_Request') # Support Chat Links Without https:// or @
 
 # Shortlink Info
-SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', True))
+SHORTLINK_MODE = bool(environ.get('SHORTLINK_MODE', False))
 SHORTLINK_URL = environ.get('SHORTLINK_URL', 'api.yamlinks.com')
 SHORTLINK_API = environ.get('SHORTLINK_API', '8ba797ded52d10834ad44fc07bf9c659a67167d4')
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
-CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
+CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
 CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://TheBlackXYZ24:TheBlackXYZ24@cluster0.cqt915d.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0") # Necessary If clone mode is true
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '-1001565553195') # Public Channel Username Without @ or without https://t.me/ and Bot Is Admin With Full Right.
 
 # Auto Approve Info : If True Then Bot Approve New Upcoming Join Request Else Not
-AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', True)) # Set True or False
-REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', True)) # Set True Or False
+AUTO_APPROVE_MODE = bool(environ.get('AUTO_APPROVE_MODE', False)) # Set True or False
+REQUEST_TO_JOIN_MODE = bool(environ.get('REQUEST_TO_JOIN_MODE', False)) # Set True Or False
 TRY_AGAIN_BTN = bool(environ.get('TRY_AGAIN_BTN', True)) # Set True Or False (This try again button is only for request to join fsub not for normal fsub
 
 # Clone Information : If Clone Mode Is True Then Bot Clone Other Bots.
-CLONE_MODE = bool(environ.get('CLONE_MODE', True)) # Set True or False
+CLONE_MODE = bool(environ.get('CLONE_MODE', False)) # Set True or False
 PUBLIC_FILE_CHANNEL = environ.get('PUBLIC_FILE_CHANNEL', '@TheBlackXYZBotz') # Public Channel Username Without @ and Bot Is Admin In Your Channel.
 CLONE_DATABASE_URI = environ.get('CLONE_DATABASE_URI', "mongodb+srv://TheBlackXYZ06:TheBlackXYZ06@cluster0.ir3gpvr.mongodb.net/?retryWrites=true&w=majority") # Necessary If clone mode is true
 
 # If PREMIUM_AND_REFERAL_MODE is True Then Fill Below Variable, If Flase Then No Need To Fill.
-PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', True)) # Set Ture Or False
+PREMIUM_AND_REFERAL_MODE = bool(environ.get('PREMIUM_AND_REFERAL_MODE', False)) # Set Ture Or False
 REFERAL_COUNT = int(environ.get('REFERAL_COUNT', '20')) # number of referal count
 REFERAL_PREMEIUM_TIME = environ.get('REFERAL_PREMEIUM_TIME', '1month')
 PAYMENT_QR = environ.get('PAYMENT_QR', 'https://graph.org/file/26efce74874b14ebdb4ff.jpg')
@@ -96,7 +96,7 @@ PAYMENT_TEXT = environ.get('PAYMENT_TEXT', '<b>- ᴀᴠᴀɪʟᴀʙʟᴇ ᴘʟ�
 OWNER_USERNAME = environ.get('OWNER_USERNAME', 'Itz_rohan_24') # owner username without @
 
 # Stream Mode Is True Then Fill All Required Variable, If False Then Don't Fill.
-STREAM_MODE = bool(environ.get('STREAM_MODE', True)) # Set True or False
+STREAM_MODE = bool(environ.get('STREAM_MODE', False)) # Set True or False
 SLEEP_THRESHOLD = int(environ.get('SLEEP_THRESHOLD', '60'))
 PING_INTERVAL = int(environ.get("PING_INTERVAL", "1200"))  # 20 minutes
 MULTI_CLIENT = False
@@ -109,7 +109,7 @@ URL = environ.get("URL", "https://enormous-carol-theblackxyz9021-2822c420.koyeb.
 # True Or False
 AI_SPELL_CHECK = bool(environ.get('AI_SPELL_CHECK', False))
 PM_SEARCH = bool(environ.get('PM_SEARCH', True))
-IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', True))
+IS_SHORTLINK = bool(environ.get('IS_SHORTLINK', False))
 MAX_BTN = is_enabled((environ.get('MAX_BTN', "True")), True)
 IS_TUTORIAL = bool(environ.get('IS_TUTORIAL', True))
 P_TTI_SHOW_OFF = is_enabled((environ.get('P_TTI_SHOW_OFF', "False")), False)
